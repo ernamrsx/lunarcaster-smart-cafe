@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import heroCafe from "../assets/terrace.png";
 
@@ -22,12 +23,12 @@ function Home() {
             </p>
 
             <div className="mt-10">
-              <a
-                href="/reserve"
+              <Link
+                to="/reserve"
                 className="inline-block bg-[#a66f5d] text-white font-serif text-lg px-12 py-5 rounded-xl shadow-lg hover:bg-[#8f5f50] transition"
               >
                 RESERVE NOW
-              </a>
+              </Link>
             </div>
           </div>
 
