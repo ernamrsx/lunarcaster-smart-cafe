@@ -1,5 +1,5 @@
 // src/App.jsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 
 import Home from "./pages/Home";
@@ -13,11 +13,12 @@ import Contact from "./pages/Contact";
 import ReservationDetail from "./pages/ReservationDetail";
 
 function App() {
- const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
+ //const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   return (
     <CartProvider>
-       <BrowserRouter basename={basename}>
+       {/* <BrowserRouter basename={basename}> */}
+        <HashRouter>
         <div className="min-h-screen bg-[#F5F0EB] text-[#3E2C24]">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -31,7 +32,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
-      </BrowserRouter>
+        </HashRouter>
+      {/* </BrowserRouter> */}
     </CartProvider>
   );
 }
